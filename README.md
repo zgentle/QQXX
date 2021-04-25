@@ -1,5 +1,2 @@
-# QX
-自用QX配置收集
-
-# conf内为QX配置内容
-test
+# QQXX
+自用QQXX配置收集
