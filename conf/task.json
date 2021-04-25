@@ -1,0 +1,7 @@
+{
+    "name": "ZGentle_task",
+    "description": "ZGentle_task",
+    "task": [
+        "0 12 * * * https://raw.githubusercontent.com/chavyleung/scripts/master/box/switcher/box.switcher.js, tag=切换会话,img-url=https://raw.githubusercontent.com/Orz-3/task/master/box.png,enabled=false",
+    ]
+}
