@@ -6,30 +6,6 @@
 	"repo": "https://github.com/zgentle/QQXX",
 	"apps": [
 		{
-			"id": "youthBanner",
-			"name": "中青看看赚",
-			"keys": ["youth_banner", "youth_android_readtime", "youth_android_reward", "youth_android_newtask", "youth_banner2", "youth_android_readtime2", "youth_android_reward2", "youth_android_newtask2", "youth_banner3", "youth_android_readtime3", "youth_android_reward3", "youth_android_newtask3", "youth_banner4", "youth_android_readtime4", "youth_android_reward4", "youth_android_newtask4"],
-			"author": "@ztxtop",
-			"settings": [{
-				"id": "delErrorData",
-				"name": "移除当日失败两次+的任务数据",
-				"val": "0",
-				"type": "radios",
-				"items": [{
-						"key": "0",
-						"label": "不移除"
-					},
-					{
-						"key": "1",
-						"label": "移除"
-					}
-				]
-		    }],
-		    "repo": "https://github.com/ztxtop/x/blob/main/youth_banner.js",
-		    "icons": ["https://raw.githubusercontent.com/Orz-3/mini/master/Alpha/youth.png", "https://raw.githubusercontent.com/Orz-3/mini/master/Color/youth.png"],
-		    "script": "https://raw.githubusercontent.com/ztxtop/x/main/youth_banner.js"
-		},
-		{
             "id": "多合一签到",
             "name": "京东",
             "keys": [
@@ -303,39 +279,179 @@
                 "https://raw.githubusercontent.com/NobyDa/mini/master/Color/jd.png"
             ]
         },
-        {
-            "id": "iQIYI",
-            "name": "爱奇艺",
+		{
+            "id": "jd_price_detect",
+            "name": "京东价格提醒",
             "keys": [
-                "CookieQY"
-            ],
-            "descs_html": [
-                "<h4 align=\"center\">获取Cookie以及脚本配置请查看<a href=\"https://raw.githubusercontent.com/NobyDa/Script/master/iQIYI-DailyBonus/iQIYI.js\">脚本注释</a></h4>"
+                "tlb_jd_timeout",
+                "tlb_jd_debug"
             ],
             "settings": [
                 {
-                    "id": "iQIYI_LogDetails",
-                    "name": "响应日志",
-                    "val": false,
-                    "type": "boolean",
+                    "id": "tlb_jd_detect_url",
+                    "name": "商品链接A",
+                    "val": "",
+                    "type": "text",
+                    "placeholder": "请在商品页获取分享链接",
+                    "desc": "请在商品页获取分享链接"
+                },
+                {
+                    "id": "tlb_jd_detect_price",
+                    "name": "商品链接A 目标价格",
+                    "val": "",
+                    "type": "number",
+                    "placeholder": "若商品A低于该价格，则会提醒。",
                     "desc": ""
                 },
                 {
-                    "id": "iQIYI_TimeOut",
-                    "name": "超时退出 (毫秒)",
+                    "id": "tlb_jd_detect_url2",
+                    "name": "商品链接B",
+                    "val": "",
+                    "type": "text",
+                    "placeholder": "请在商品页获取分享链接",
+                    "desc": "请在商品页获取分享链接"
+                },
+                {
+                    "id": "tlb_jd_detect_price2",
+                    "name": "商品链接B 目标价格",
                     "val": "",
                     "type": "number",
-                    "placeholder": "默认无超时 (点击以展开说明)",
-                    "desc": "按需填写, 用于由网络不稳定引起的脚本中断, 正常用户建议留空. 如QX日志出现\"JS Context timeout\"后脚本中断时, 建议填写6000"
+                    "placeholder": "若商品B低于该价格，则会提醒。",
+                    "desc": ""
+                },
+                {
+                    "id": "tlb_jd_detect_url3",
+                    "name": "商品链接C",
+                    "val": "",
+                    "type": "text",
+                    "placeholder": "请在商品页获取分享链接",
+                    "desc": "请在商品页获取分享链接"
+                },
+                {
+                    "id": "tlb_jd_detect_price3",
+                    "name": "商品链接C 目标价格",
+                    "val": "",
+                    "type": "number",
+                    "placeholder": "若商品C低于该价格，则会提醒。",
+                    "desc": ""
+                },
+                {
+                    "id": "tlb_jd_timeout",
+                    "name": "[debug]请求超时限制 (毫秒)",
+                    "val": 3000,
+                    "type": "number",
+                    "desc": ""
+                },
+                {
+                    "id": "tlb_jd_debug",
+                    "name": "[debug]开启调试",
+                    "val": false,
+                    "type": "boolean",
+                    "desc": ""
                 }
             ],
-            "script": "https://raw.githubusercontent.com/NobyDa/Script/master/iQIYI-DailyBonus/iQIYI.js",
-            "author": "@NobyDa",
-            "repo": "https://github.com/NobyDa/Script/blob/master/iQIYI-DailyBonus/iQIYI.js",
+            "author": "@toulanboy",
+            "repo": "https://github.com/toulanboy/scripts/blob/master/jd_price_detect",
             "icons": [
-                "https://raw.githubusercontent.com/NobyDa/mini/master/Alpha/iQIYI.png",
-                "https://raw.githubusercontent.com/NobyDa/mini/master/Color/iQIYI.png"
+                "https://raw.githubusercontent.com/Orz-3/mini/master/jd.png",
+                "https://raw.githubusercontent.com/Orz-3/task/master/jd.png"
+            ],
+            "script": "https://raw.githubusercontent.com/toulanboy/scripts/master/jd_price_detect/jd_price_detect.js"
+        },
+		{
+            "author": "@sunert",
+            "keys": [
+                "city",
+                "citynum",
+                "cut",
+                "day_desc",
+                "hour_desc",
+                "index_desc"
+            ],
+            "repo": "https://github.com/Sunert/Scripts/blob/master/Task/moji.js",
+            "id": "moji",
+            "script": "https://raw.githubusercontent.com/Sunert/Scripts/master/Task/moji.js",
+            "settings": [
+                {
+                    "id": "city",
+                    "val": "北京",
+                    "name": "城市",
+                    "type": "text",
+                    "desc": "请填写中文地区，可选择地市区和部分景区"
+                },
+                {
+                    "id": "citynum",
+                    "placeholder": "默认1 (点击以展开说明)",
+                    "val": "",
+                    "name": "城市序号",
+                    "type": "number",
+                    "desc": "选择地区，请填写日志内地区前的数字序号"
+                },
+                {
+                    "id": "cut",
+                    "val": false,
+                    "name": "精简日志模式",
+                    "type": "boolean",
+                    "desc": "显示详情描述，默认关闭日志"
+                },
+                {
+                    "id": "day_desc",
+                    "val": true,
+                    "name": "每周天气",
+                    "type": "boolean",
+                    "desc": "每周天气接口，可显示6天天气情况"
+                },
+                {
+                    "id": "hour_desc",
+                    "val": false,
+                    "name": "小时天气",
+                    "type": "boolean",
+                    "desc": "未来6小时天气情况"
+                },
+                {
+                    "id": "forty_desc",
+                    "val": false,
+                    "name": "40天预告",
+                    "type": "boolean",
+                    "desc": "未来40天天气预告"
+                },
+                {
+                    "id": "index_desc",
+                    "val": true,
+                    "name": "生活指数",
+                    "type": "boolean",
+                    "desc": "可显示生活指数情况"
+                }
+            ],
+            "name": "墨迹天气",
+            "icons": [
+                "https://cdn.jsdelivr.net/gh/Orz-3/mini@master/Alpha/moji.png",
+                "https://cdn.jsdelivr.net/gh/Orz-3/mini@master/Color/moji.png"
             ]
-        }
+        },
+		{
+			"id": "youthBanner",
+			"name": "中青看看赚",
+			"keys": ["youth_banner", "youth_android_readtime", "youth_android_reward", "youth_android_newtask", "youth_banner2", "youth_android_readtime2", "youth_android_reward2", "youth_android_newtask2", "youth_banner3", "youth_android_readtime3", "youth_android_reward3", "youth_android_newtask3", "youth_banner4", "youth_android_readtime4", "youth_android_reward4", "youth_android_newtask4"],
+			"author": "@ztxtop",
+			"settings": [{
+				"id": "delErrorData",
+				"name": "移除当日失败两次+的任务数据",
+				"val": "0",
+				"type": "radios",
+				"items": [{
+						"key": "0",
+						"label": "不移除"
+					},
+					{
+						"key": "1",
+						"label": "移除"
+					}
+				]
+		    }],
+		    "repo": "https://github.com/ztxtop/x/blob/main/youth_banner.js",
+		    "icons": ["https://raw.githubusercontent.com/Orz-3/mini/master/Alpha/youth.png", "https://raw.githubusercontent.com/Orz-3/mini/master/Color/youth.png"],
+		    "script": "https://raw.githubusercontent.com/ztxtop/x/main/youth_banner.js"
+		},
 	]
 }
