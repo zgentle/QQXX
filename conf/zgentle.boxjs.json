@@ -635,6 +635,101 @@
             "repo": "https://cdn.jsdelivr.net/gh/ziye888/JavaScript@main/Task/tls.js",
             "icons": ["https://cdn.jsdelivr.net/gh/ziye888/JavaScript@main/Task/tls.png", "https://cdn.jsdelivr.net/gh/ziye888/JavaScript@main/Task/tls.png"],
             "script": "https://cdn.jsdelivr.net/gh/ziye888/JavaScript@main/Task/tls.js"
+        },
+		{
+            "id": "didi",
+            "name": "滴滴出行",
+            "keys": [
+                "didi_token",
+                "didi_city_id",
+                "didi_lid"
+            ],
+            "settings": [
+                {
+                    "id": "didi_showLog",
+                    "name": "日志开关",
+                    "val": false,
+                    "type": "boolean",
+                    "desc": "是否打开接口返回详情日志打印，默认关闭"
+                },
+                {
+                    "id": "didi_lottery",
+                    "name": "抽奖开关",
+                    "val": true,
+                    "type": "boolean",
+                    "desc": "是否打开福利金抽奖，默认关闭"
+                }
+            ],
+            "author": "@whyour",
+            "repo": "https://github.com/whyour/hundun/blob/master/quanx/didi.js",
+            "script": "https://raw.githubusercontent.com/whyour/hundun/master/quanx/didi.js",
+            "icons": [
+                "https://raw.githubusercontent.com/Orz-3/mini/master/didi.png",
+                "https://raw.githubusercontent.com/Orz-3/task/master/didi.png"
+            ]
+        },
+		{
+            "id": "zZ.Haidilao",
+            "name": "海底捞",
+            "descs_html": [
+                "请先按<a href=\"https://raw.githubusercontent.com/zZPiglet/Task/master/Haidilao/Haidilao.js\">脚本注释</a>进行配置，然后进入\"海底捞\"app，手动签到一次或点击\"签到\"，若弹出\"首次写入海底捞等级 Token 成功\"及\"首次写入海底捞签到 Cookie 成功\"即可正常食用。",
+                "需要注意的是，有两条重写，一条为获取用户基本信息的，一条为签到的。两者独立互不影响，故即使没有获取到基础信息的，依旧可以签到，只是会有部分错误及 undefined。两次通知应该分别在进入\"我的\"及\"签到\"处通知。"
+            ],
+            "keys": [
+                "hilh",
+                "hilb",
+                "hich"
+            ],
+            "settings": [
+                {
+                    "id": "hilh",
+                    "name": "Token",
+                    "val": "",
+                    "type": "textarea",
+                    "autoGrow": true,
+                    "rows": 3,
+                    "desc": "用户等级接口登陆验证信息 _HAIDILAO_APP_TOKEN。"
+                },
+                {
+                    "id": "@hilb._HAIDILAO_APP_TOKEN",
+                    "name": "Body._HAIDILAO_APP_TOKEN",
+                    "val": "",
+                    "type": "textarea",
+                    "autoGrow": true,
+                    "rows": 2,
+                    "desc": "用户等级接口请求消息体，登陆验证信息，此部分应与 Token 中 _HAIDILAO_APP_TOKEN= 之后值一致。"
+                },
+                {
+                    "id": "@hilb.customerId",
+                    "name": "Body.customerId",
+                    "val": "",
+                    "type": "text",
+                    "desc": "用户等级接口请求消息体，用户编号。"
+                },
+                {
+                    "id": "@hilb.country",
+                    "name": "Body.country",
+                    "val": "",
+                    "type": "text",
+                    "desc": "用户等级接口请求消息体，国家。"
+                },
+                {
+                    "id": "hich",
+                    "name": "Cookie",
+                    "val": "",
+                    "type": "textarea",
+                    "autoGrow": true,
+                    "rows": 7,
+                    "desc": "签到接口登陆验证信息，包含更多信息，可自行修改调试。"
+                }
+            ],
+            "author": "@zZPiglet",
+            "repo": "https://github.com/zZPiglet/Task/blob/master/Haidilao/Haidilao.js",
+            "script": "https://raw.githubusercontent.com/zZPiglet/Task/master/Haidilao/Haidilao.js",
+            "icons": [
+                "https://raw.githubusercontent.com/Orz-3/mini/master/Alpha/haidilao.png",
+                "https://raw.githubusercontent.com/Orz-3/mini/master/Color/haidilao.png"
+            ]
         }
 	]
 }
