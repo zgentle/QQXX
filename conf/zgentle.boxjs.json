@@ -6,715 +6,674 @@
 	"repo": "https://github.com/zgentle/QQXX",
 	"apps": [
 		{
-            "id": "多合一签到",
-            "name": "京东",
-            "keys": [
-                "CookieJD",
-                "CookieJD2",
-                "CookiesJD"
-            ],
-            "descs_html": [
-                "<h4 align=\"center\">获取Cookie以及脚本配置请查看<a href=\"https://raw.githubusercontent.com/NobyDa/Script/master/JD-DailyBonus/JD_DailyBonus.js\">脚本注释</a></h4>",
-                "<br />",
-                "<h3 align=\"center\">签到相关教程</h3>",
-                "<p align=\"center\"><iframe src=\"https://www.youtube.com/embed/6vMz1LKF1-8\" width=\"100%\" height=\"100%\"></iframe></p>"
-            ],
-            "settings": [
-                {
-                    "id": "JD_DailyBonusLog",
-                    "name": "详细响应日志",
-                    "val": false,
-                    "type": "boolean",
-                    "desc": "打印原始签到结果, 用于调试脚本, 一般用户建议关闭."
-                },
-                {
-                    "id": "JD_Crash_disable",
-                    "name": "崩溃自动禁用",
-                    "val": true,
-                    "type": "boolean",
-                    "desc": "脚本运行崩溃时(如VPN断连), 下次运行时将自动禁用相关崩溃接口(仅部分接口启用), 注: 崩溃时可能会误禁用正常接口."
-                },
-                {
-                    "id": "JD_Retry_disable",
-                    "name": "签到接口增强",
-                    "val": true,
-                    "type": "boolean",
-                    "desc": "用于部分接口提示\"不含活动数据\"问题, 开启后会进行二次查询, 注: 可能会导致崩溃(小概率)."
-                },
-                {
-                    "id": "JD_Follow_disable",
-                    "name": "自动关注店铺",
-                    "val": true,
-                    "type": "boolean",
-                    "desc": "部分接口签到过程可能需要关注店铺, 如介意可选择关闭."
-                },
-                {
-                    "id": "JD_DailyBonusDisables",
-                    "name": "签到接口禁用",
-                    "val": "",
-                    "type": "checkboxes",
-                    "desc": "",
-                    "items": [
-                        {
-                            "key": "SpeedUp",
-                            "label": "天天加速"
-                        },
-                        {
-                            "key": "JDBean",
-                            "label": "京东京豆"
-                        },
-                        {
-                            "key": "JDEsports",
-                            "label": "京东电竞"
-                        },
-                        {
-                            "key": "JRDoll",
-                            "label": "金融签壹"
-                        },
-                        {
-                            "key": "JRTwoDoll",
-                            "label": "金融签贰"
-                        },
-                        {
-                            "key": "JRThreeDoll",
-                            "label": "金融签叁"
-                        },
-                        {
-                            "key": "JRFourDoll",
-                            "label": "金融签肆"
-                        },
-                        {
-                            "key": "JRFiveDoll",
-                            "label": "金融签伍"
-                        },
-                        {
-                            "key": "XJDouble",
-                            "label": "现金双签"
-                        },
-                        {
-                            "key": "JRSteel",
-                            "label": "金融钢镚"
-                        },
-                        {
-                            "key": "JDTurn",
-                            "label": "京东转盘"
-                        },
-                        {
-                            "key": "JDGStore",
-                            "label": "京东超市"
-                        },
-                        {
-                            "key": "JDComputer",
-                            "label": "京东电脑"
-                        },
-                        {
-                            "key": "JDCard",
-                            "label": "京东卡包"
-                        },
-                        {
-                            "key": "JD3C",
-                            "label": "京东数码"
-                        },
-                        {
-                            "key": "JDClothing",
-                            "label": "京东服饰"
-                        },
-                        {
-                            "key": "JDSuitcase",
-                            "label": "京东箱包"
-                        },
-                        {
-                            "key": "JDChild",
-                            "label": "京东童装"
-                        },
-                        {
-                            "key": "JDBaby",
-                            "label": "京东母婴"
-                        },
-                        {
-                            "key": "JDCash",
-                            "label": "京东红包"
-                        },
-                        {
-                            "key": "JDFSale",
-                            "label": "京东闪购"
-                        },
-                        {
-                            "key": "JDBook",
-                            "label": "京东图书"
-                        },
-                        {
-                            "key": "JDSchool",
-                            "label": "京东校园"
-                        },
-                        {
-                            "key": "JDUndies",
-                            "label": "京东内衣"
-                        },
-                        {
-                            "key": "JDShoes",
-                            "label": "京东鞋靴"
-                        },
-                        {
-                            "key": "JDShand",
-                            "label": "京东二手"
-                        },
-                        {
-                            "key": "JDHealth",
-                            "label": "京东健康"
-                        },
-                        {
-                            "key": "JDWomen",
-                            "label": "京东女装"
-                        },
-                        {
-                            "key": "JDSecKill",
-                            "label": "京东秒杀"
-                        },
-                        {
-                            "key": "JTDouble",
-                            "label": "金贴双签"
-                        },
-                        {
-                            "key": "JDMakeup",
-                            "label": "京东美妆"
-                        },
-                        {
-                            "key": "JDVege",
-                            "label": "京东菜场"
-                        },
-                        {
-                            "key": "JDClean",
-                            "label": "京东清洁"
-                        },
-                        {
-                            "key": "JDCare",
-                            "label": "京东个护"
-                        },
-                        {
-                            "key": "JDJewels",
-                            "label": "京东珠宝"
-                        },
-                        {
-                            "key": "JDCube",
-                            "label": "京东魔方"
-                        },
-                        {
-                            "key": "JDBuyCar",
-                            "label": "京东汽车"
-                        },
-                        {
-                            "key": "JDDouble",
-                            "label": "京豆双签"
-                        },
-                        {
-                            "key": "subsidy",
-                            "label": "京东金贴"
-                        },
-                        {
-                            "key": "JDGetCash",
-                            "label": "京东现金"
-                        },
-                        {
-                            "key": "JDJingCai",
-                            "label": "京东精彩"
-                        },
-                        {
-                            "key": "JDShake",
-                            "label": "京东摇一摇"
-                        },
-                        {
-                            "key": "Qbear",
-                            "label": "总京豆查询"
-                        },
-                        {
-                            "key": "TCash",
-                            "label": "总红包查询"
-                        },
-                        {
-                            "key": "TSteel",
-                            "label": "总钢镚查询"
-                        },
-                        {
-                            "key": "TotalSubsidy",
-                            "label": "总金贴查询"
-                        },
-                        {
-                            "key": "TotalMoney",
-                            "label": "总现金查询"
-                        }
-                    ]
-                },
-                {
-                    "id": "JD_DailyBonusTimeOut",
-                    "name": "超时退出 (毫秒)",
-                    "val": "",
-                    "type": "number",
-                    "placeholder": "默认无超时 (点击以展开说明)",
-                    "desc": "按需填写, 用于由网络不稳定引起的脚本中断, 正常或越狱用户建议留空. 如QX日志出现大量\"JS Context timeout\"后脚本中断时, 建议填写6000"
-                },
-                {
-                    "id": "JD_DailyBonusDelay",
-                    "name": "接口延迟 (毫秒)",
-                    "val": "",
-                    "type": "number",
-                    "placeholder": "默认并发无延迟 (点击以展开说明)",
-                    "desc": "延迟作用于每个签到接口, 该参数接受随机或指定延迟(例: '2000'则表示延迟2秒; '2000-5000'则表示延迟最小2秒,最大5秒内的随机延迟), 如填入延迟则切换顺序签到(耗时较长); VPN重启或越狱用户建议填写1(顺序执行), Surge用户请注意在SurgeUI界面调整脚本超时."
-                }
-            ],
-            "scripts": [
-                {
-                    "name": "京东签到",
-                    "script": "https://raw.githubusercontent.com/NobyDa/Script/master/JD-DailyBonus/JD_DailyBonus.js"
-                },
-                {
-                    "name": "初始化设置",
-                    "script": "https://gist.githubusercontent.com/NobyDa/91cbe57dd50b3588a975af8922507a72/raw/JD_initial.js"
-                }
-            ],
-            "author": "@NobyDa",
-            "repo": "https://github.com/NobyDa/Script/tree/master/JD-DailyBonus",
-            "icons": [
-                "https://raw.githubusercontent.com/NobyDa/mini/master/Alpha/jd.png",
-                "https://raw.githubusercontent.com/NobyDa/mini/master/Color/jd.png"
-            ]
-        },
+			"id": "多合一签到",
+			"name": "京东",
+			"keys": [
+				"CookieJD",
+				"CookieJD2",
+				"CookiesJD"
+			],
+			"descs_html": [
+				"<h4 align=\"center\">获取Cookie以及脚本配置请查看<a href=\"https://raw.githubusercontent.com/NobyDa/Script/master/JD-DailyBonus/JD_DailyBonus.js\">脚本注释</a></h4>",
+				"<br />",
+				"<h3 align=\"center\">签到相关教程</h3>",
+				"<p align=\"center\"><iframe src=\"https://www.youtube.com/embed/6vMz1LKF1-8\" width=\"100%\" height=\"100%\"></iframe></p>"
+			],
+			"settings": [
+				{
+					"id": "JD_DailyBonusLog",
+					"name": "详细响应日志",
+					"val": false,
+					"type": "boolean",
+					"desc": "打印原始签到结果, 用于调试脚本, 一般用户建议关闭."
+				},
+				{
+					"id": "JD_Crash_disable",
+					"name": "崩溃自动禁用",
+					"val": true,
+					"type": "boolean",
+					"desc": "脚本运行崩溃时(如VPN断连), 下次运行时将自动禁用相关崩溃接口(仅部分接口启用), 注: 崩溃时可能会误禁用正常接口."
+				},
+				{
+					"id": "JD_Retry_disable",
+					"name": "签到接口增强",
+					"val": true,
+					"type": "boolean",
+					"desc": "用于部分接口提示\"不含活动数据\"问题, 开启后会进行二次查询, 注: 可能会导致崩溃(小概率)."
+				},
+				{
+					"id": "JD_Follow_disable",
+					"name": "自动关注店铺",
+					"val": true,
+					"type": "boolean",
+					"desc": "部分接口签到过程可能需要关注店铺, 如介意可选择关闭."
+				},
+				{
+					"id": "JD_DailyBonusDisables",
+					"name": "签到接口禁用",
+					"val": "",
+					"type": "checkboxes",
+					"desc": "",
+					"items": [
+						{
+							"key": "SpeedUp",
+							"label": "天天加速"
+						},
+						{
+							"key": "JDBean",
+							"label": "京东京豆"
+						},
+						{
+							"key": "JDEsports",
+							"label": "京东电竞"
+						},
+						{
+							"key": "JRDoll",
+							"label": "金融签壹"
+						},
+						{
+							"key": "JRTwoDoll",
+							"label": "金融签贰"
+						},
+						{
+							"key": "JRThreeDoll",
+							"label": "金融签叁"
+						},
+						{
+							"key": "JRFourDoll",
+							"label": "金融签肆"
+						},
+						{
+							"key": "JRFiveDoll",
+							"label": "金融签伍"
+						},
+						{
+							"key": "XJDouble",
+							"label": "现金双签"
+						},
+						{
+							"key": "JRSteel",
+							"label": "金融钢镚"
+						},
+						{
+							"key": "JDTurn",
+							"label": "京东转盘"
+						},
+						{
+							"key": "JDGStore",
+							"label": "京东超市"
+						},
+						{
+							"key": "JDComputer",
+							"label": "京东电脑"
+						},
+						{
+							"key": "JDCard",
+							"label": "京东卡包"
+						},
+						{
+							"key": "JD3C",
+							"label": "京东数码"
+						},
+						{
+							"key": "JDClothing",
+							"label": "京东服饰"
+						},
+						{
+							"key": "JDSuitcase",
+							"label": "京东箱包"
+						},
+						{
+							"key": "JDChild",
+							"label": "京东童装"
+						},
+						{
+							"key": "JDBaby",
+							"label": "京东母婴"
+						},
+						{
+							"key": "JDCash",
+							"label": "京东红包"
+						},
+						{
+							"key": "JDFSale",
+							"label": "京东闪购"
+						},
+						{
+							"key": "JDBook",
+							"label": "京东图书"
+						},
+						{
+							"key": "JDSchool",
+							"label": "京东校园"
+						},
+						{
+							"key": "JDUndies",
+							"label": "京东内衣"
+						},
+						{
+							"key": "JDShoes",
+							"label": "京东鞋靴"
+						},
+						{
+							"key": "JDShand",
+							"label": "京东二手"
+						},
+						{
+							"key": "JDHealth",
+							"label": "京东健康"
+						},
+						{
+							"key": "JDWomen",
+							"label": "京东女装"
+						},
+						{
+							"key": "JDSecKill",
+							"label": "京东秒杀"
+						},
+						{
+							"key": "JTDouble",
+							"label": "金贴双签"
+						},
+						{
+							"key": "JDMakeup",
+							"label": "京东美妆"
+						},
+						{
+							"key": "JDVege",
+							"label": "京东菜场"
+						},
+						{
+							"key": "JDClean",
+							"label": "京东清洁"
+						},
+						{
+							"key": "JDCare",
+							"label": "京东个护"
+						},
+						{
+							"key": "JDJewels",
+							"label": "京东珠宝"
+						},
+						{
+							"key": "JDCube",
+							"label": "京东魔方"
+						},
+						{
+							"key": "JDBuyCar",
+							"label": "京东汽车"
+						},
+						{
+							"key": "JDDouble",
+							"label": "京豆双签"
+						},
+						{
+							"key": "subsidy",
+							"label": "京东金贴"
+						},
+						{
+							"key": "JDGetCash",
+							"label": "京东现金"
+						},
+						{
+							"key": "JDJingCai",
+							"label": "京东精彩"
+						},
+						{
+							"key": "JDShake",
+							"label": "京东摇一摇"
+						},
+						{
+							"key": "Qbear",
+							"label": "总京豆查询"
+						},
+						{
+							"key": "TCash",
+							"label": "总红包查询"
+						},
+						{
+							"key": "TSteel",
+							"label": "总钢镚查询"
+						},
+						{
+							"key": "TotalSubsidy",
+							"label": "总金贴查询"
+						},
+						{
+							"key": "TotalMoney",
+							"label": "总现金查询"
+						}
+					]
+				},
+				{
+					"id": "JD_DailyBonusTimeOut",
+					"name": "超时退出 (毫秒)",
+					"val": "",
+					"type": "number",
+					"placeholder": "默认无超时 (点击以展开说明)",
+					"desc": "按需填写, 用于由网络不稳定引起的脚本中断, 正常或越狱用户建议留空. 如QX日志出现大量\"JS Context timeout\"后脚本中断时, 建议填写6000"
+				},
+				{
+					"id": "JD_DailyBonusDelay",
+					"name": "接口延迟 (毫秒)",
+					"val": "",
+					"type": "number",
+					"placeholder": "默认并发无延迟 (点击以展开说明)",
+					"desc": "延迟作用于每个签到接口, 该参数接受随机或指定延迟(例: '2000'则表示延迟2秒; '2000-5000'则表示延迟最小2秒,最大5秒内的随机延迟), 如填入延迟则切换顺序签到(耗时较长); VPN重启或越狱用户建议填写1(顺序执行), Surge用户请注意在SurgeUI界面调整脚本超时."
+				}
+			],
+			"scripts": [
+				{
+					"name": "京东签到",
+					"script": "https://raw.githubusercontent.com/NobyDa/Script/master/JD-DailyBonus/JD_DailyBonus.js"
+				},
+				{
+					"name": "初始化设置",
+					"script": "https://gist.githubusercontent.com/NobyDa/91cbe57dd50b3588a975af8922507a72/raw/JD_initial.js"
+				}
+			],
+			"author": "@NobyDa",
+			"repo": "https://github.com/NobyDa/Script/tree/master/JD-DailyBonus",
+			"icons": [
+				"https://raw.githubusercontent.com/NobyDa/mini/master/Alpha/jd.png",
+				"https://raw.githubusercontent.com/NobyDa/mini/master/Color/jd.png"
+			]
+		},
 		{
-            "id": "jd_price_detect",
-            "name": "京东价格提醒",
-            "keys": [
-                "tlb_jd_timeout",
-                "tlb_jd_debug"
-            ],
-            "settings": [
-                {
-                    "id": "tlb_jd_detect_url",
-                    "name": "商品链接A",
-                    "val": "",
-                    "type": "text",
-                    "placeholder": "请在商品页获取分享链接",
-                    "desc": "请在商品页获取分享链接"
-                },
-                {
-                    "id": "tlb_jd_detect_price",
-                    "name": "商品链接A 目标价格",
-                    "val": "",
-                    "type": "number",
-                    "placeholder": "若商品A低于该价格，则会提醒。",
-                    "desc": ""
-                },
-                {
-                    "id": "tlb_jd_detect_url2",
-                    "name": "商品链接B",
-                    "val": "",
-                    "type": "text",
-                    "placeholder": "请在商品页获取分享链接",
-                    "desc": "请在商品页获取分享链接"
-                },
-                {
-                    "id": "tlb_jd_detect_price2",
-                    "name": "商品链接B 目标价格",
-                    "val": "",
-                    "type": "number",
-                    "placeholder": "若商品B低于该价格，则会提醒。",
-                    "desc": ""
-                },
-                {
-                    "id": "tlb_jd_detect_url3",
-                    "name": "商品链接C",
-                    "val": "",
-                    "type": "text",
-                    "placeholder": "请在商品页获取分享链接",
-                    "desc": "请在商品页获取分享链接"
-                },
-                {
-                    "id": "tlb_jd_detect_price3",
-                    "name": "商品链接C 目标价格",
-                    "val": "",
-                    "type": "number",
-                    "placeholder": "若商品C低于该价格，则会提醒。",
-                    "desc": ""
-                },
-                {
-                    "id": "tlb_jd_timeout",
-                    "name": "[debug]请求超时限制 (毫秒)",
-                    "val": 3000,
-                    "type": "number",
-                    "desc": ""
-                },
-                {
-                    "id": "tlb_jd_debug",
-                    "name": "[debug]开启调试",
-                    "val": false,
-                    "type": "boolean",
-                    "desc": ""
-                }
-            ],
-            "author": "@toulanboy",
-            "repo": "https://github.com/toulanboy/scripts/blob/master/jd_price_detect",
-            "icons": [
-                "https://raw.githubusercontent.com/Orz-3/mini/master/jd.png",
-                "https://raw.githubusercontent.com/Orz-3/task/master/jd.png"
-            ],
-            "script": "https://raw.githubusercontent.com/toulanboy/scripts/master/jd_price_detect/jd_price_detect.js"
-        },
+			"id": "jd_price_detect",
+			"name": "京东价格提醒",
+			"keys": [
+				"tlb_jd_timeout",
+				"tlb_jd_debug"
+			],
+			"settings": [
+				{
+					"id": "tlb_jd_detect_url",
+					"name": "商品链接A",
+					"val": "",
+					"type": "text",
+					"placeholder": "请在商品页获取分享链接",
+					"desc": "请在商品页获取分享链接"
+				},
+				{
+					"id": "tlb_jd_detect_price",
+					"name": "商品链接A 目标价格",
+					"val": "",
+					"type": "number",
+					"placeholder": "若商品A低于该价格，则会提醒。",
+					"desc": ""
+				},
+				{
+					"id": "tlb_jd_detect_url2",
+					"name": "商品链接B",
+					"val": "",
+					"type": "text",
+					"placeholder": "请在商品页获取分享链接",
+					"desc": "请在商品页获取分享链接"
+				},
+				{
+					"id": "tlb_jd_detect_price2",
+					"name": "商品链接B 目标价格",
+					"val": "",
+					"type": "number",
+					"placeholder": "若商品B低于该价格，则会提醒。",
+					"desc": ""
+				},
+				{
+					"id": "tlb_jd_detect_url3",
+					"name": "商品链接C",
+					"val": "",
+					"type": "text",
+					"placeholder": "请在商品页获取分享链接",
+					"desc": "请在商品页获取分享链接"
+				},
+				{
+					"id": "tlb_jd_detect_price3",
+					"name": "商品链接C 目标价格",
+					"val": "",
+					"type": "number",
+					"placeholder": "若商品C低于该价格，则会提醒。",
+					"desc": ""
+				},
+				{
+					"id": "tlb_jd_timeout",
+					"name": "[debug]请求超时限制 (毫秒)",
+					"val": 3000,
+					"type": "number",
+					"desc": ""
+				},
+				{
+					"id": "tlb_jd_debug",
+					"name": "[debug]开启调试",
+					"val": false,
+					"type": "boolean",
+					"desc": ""
+				}
+			],
+			"author": "@toulanboy",
+			"repo": "https://github.com/toulanboy/scripts/blob/master/jd_price_detect",
+			"icons": [
+				"https://raw.githubusercontent.com/Orz-3/mini/master/jd.png",
+				"https://raw.githubusercontent.com/Orz-3/task/master/jd.png"
+			],
+			"script": "https://raw.githubusercontent.com/toulanboy/scripts/master/jd_price_detect/jd_price_detect.js"
+		},
 		{
-            "author": "@sunert",
-            "descs_html": [
-                "<h4 align=\"center\">获取Cookie以及脚本配置请查看<a href=\"https://github.com/Sunert/Scripts/raw/master/TaskConf/youth/readme.md\">配置说明</a></h4>",
-                "<br />",
-                "<p>其中<font color='#FF0000',font-weight: bold>zq_nick、zqcash</font>和<font color='#FF0000',font-weight: bold>zqcard</font>为昵称、提现金额和早起打卡开关，无需另外获取，相关项设置后自动生成，cashurl_zq和cashbody_zq为提现请求，获取后方可自动提现，可选</p>"
-            ],
-            "keys": [
-                "zq_nick",
-                "youthheader_zq",
-                "read_zq",
-                "readtime_zq",
-                "cashurl_zq",
-                "cashbody_zq",
-                "zqcash",
-                "zqcard"
-            ],
-            "repo": "https://github.com/Sunert/Scripts/blob/master/Task/youth.js",
-            "id": "youth",
-            "script": "https://raw.githubusercontent.com/Sunert/Scripts/master/Task/youth.js",
-            "settings": [
-                {
-                    "id": "zqcard",
-                    "val": "false",
-                    "name": "打卡赚钱",
-                    "type": "boolean",
-                    "desc": "每日打卡报名及早起打卡"
-                },
-                {
-                    "id": "zqtime",
-                    "val": "05",
-                    "name": "打卡时间",
-                    "type": "number",
-                    "desc": "每日早起打卡时间"
-                },
-                {
-                    "id": "delay_rotary_zq",
-                    "val": "10",
-                    "name": "转盘时间间隔",
-                    "type": "number",
-                    "desc": "间隔时间设置，如1秒填1即可"
-                },
-                {
-                    "id": "notifytimes",
-                    "val": "",
-                    "name": "通知频率 (点击查看设置说明)",
-                    "type": "number",
-                    "desc": "设定通知频率，前三次为全部通知，之后转盘次数/设定频率整除时通知，如设置0为无通知，设置1为全部通知，设置其他数可整除余0时通知，默认值50"
-                },
-                {
-                    "id": "zqcash",
-                    "val": "30",
-                    "name": "提现金额",
-                    "type": "radios",
-                    "desc": "自动提现金额需和获取提现请求保持一致",
-                    "items": [
-                        {
-                            "key": "10",
-                            "label": "10元"
-                        },
-                        {
-                            "key": "30",
-                            "label": "30元"
-                        },
-                        {
-                            "key": "100",
-                            "label": "100元"
-                        }
-                    ]
-                }
-            ],
-            "name": "中青看点",
-            "icons": [
-                "https://cdn.jsdelivr.net/gh/Orz-3/mini@master/Alpha/youth.png",
-                "https://cdn.jsdelivr.net/gh/Orz-3/mini@master/Color/youth.png"
-            ]
-        },
-        {
-            "author": "@sunert",
-            "keys": [
-                "youth_autoread",
-                "autotime_zq"
-            ],
-            "settings": [
-                {
-                    "id": "youth_cut",
-                    "val": false,
-                    "name": "缩减请求",
-                    "type": "boolean",
-                    "desc": "自动删除收益为0或者错误的阅读请求，使用完后请立即关闭，避免清空阅读请求"
-                }
-            ],
-            "repo": "https://github.com/Sunert/Scripts/blob/master/Task/Youth_Read.js",
-            "id": "youthRead",
-            "script": "https://raw.githubusercontent.com/Sunert/Scripts/master/Task/Youth_Read.js",
-            "name": "中青自动阅读",
-            "icons": [
-                "https://cdn.jsdelivr.net/gh/Orz-3/mini@master/Alpha/youth.png",
-                "https://cdn.jsdelivr.net/gh/Orz-3/mini@master/Color/youth.png"
-            ]
-        },
+			"author": "@sunert",
+			"descs_html": [
+				"<h4 align=\"center\">获取Cookie以及脚本配置请查看<a href=\"https://github.com/Sunert/Scripts/raw/master/TaskConf/youth/readme.md\">配置说明</a></h4>",
+				"<br />",
+				"<p>其中<font color='#FF0000',font-weight: bold>zq_nick、zqcash</font>和<font color='#FF0000',font-weight: bold>zqcard</font>为昵称、提现金额和早起打卡开关，无需另外获取，相关项设置后自动生成，cashurl_zq和cashbody_zq为提现请求，获取后方可自动提现，可选</p>"
+			],
+			"keys": [
+				"zq_nick",
+				"youthheader_zq",
+				"read_zq",
+				"readtime_zq",
+				"cashurl_zq",
+				"cashbody_zq",
+				"zqcash",
+				"zqcard"
+			],
+			"repo": "https://github.com/Sunert/Scripts/blob/master/Task/youth.js",
+			"id": "youth",
+			"script": "https://raw.githubusercontent.com/Sunert/Scripts/master/Task/youth.js",
+			"settings": [
+				{
+					"id": "zqcard",
+					"val": "false",
+					"name": "打卡赚钱",
+					"type": "boolean",
+					"desc": "每日打卡报名及早起打卡"
+				},
+				{
+					"id": "zqtime",
+					"val": "05",
+					"name": "打卡时间",
+					"type": "number",
+					"desc": "每日早起打卡时间"
+				},
+				{
+					"id": "delay_rotary_zq",
+					"val": "10",
+					"name": "转盘时间间隔",
+					"type": "number",
+					"desc": "间隔时间设置，如1秒填1即可"
+				},
+				{
+					"id": "notifytimes",
+					"val": "",
+					"name": "通知频率 (点击查看设置说明)",
+					"type": "number",
+					"desc": "设定通知频率，前三次为全部通知，之后转盘次数/设定频率整除时通知，如设置0为无通知，设置1为全部通知，设置其他数可整除余0时通知，默认值50"
+				},
+				{
+					"id": "zqcash",
+					"val": "30",
+					"name": "提现金额",
+					"type": "radios",
+					"desc": "自动提现金额需和获取提现请求保持一致",
+					"items": [
+						{
+							"key": "10",
+							"label": "10元"
+						},
+						{
+							"key": "30",
+							"label": "30元"
+						},
+						{
+							"key": "100",
+							"label": "100元"
+						}
+					]
+				}
+			],
+			"name": "中青看点",
+			"icons": [
+				"https://cdn.jsdelivr.net/gh/Orz-3/mini@master/Alpha/youth.png",
+				"https://cdn.jsdelivr.net/gh/Orz-3/mini@master/Color/youth.png"
+			]
+		},
 		{
-            "author": "@sunert",
-            "descs_html": [
-                "<h4 align=\"center\">获取Cookie以及脚本配置请查看<a href=\"https://github.com/Sunert/Scripts/raw/master/TaskConf/sina/readme.md\">配置说明</a></h4>",
-                "<br />",
-                "<p>其中<font color='#FF0000',font-weight: bold>wb_nick</font>为账号昵称，无需另外获取，脚本运行可自动生成，wb_cookie为任务红包余额，获取后方可显示，可选，sy_token_wb为微博签到token，必选</p>"
-            ],
-            "keys": [
-                "sy_token_wb",
-                "wb_cookie",
-                "wb_nick"
-            ],
-            "repo": "https://github.com/Sunert/Scripts/blob/master/Task/weibo.js",
-            "id": "weibo",
-            "script": "https://raw.githubusercontent.com/Sunert/Scripts/master/Task/weibo.js",
-            "name": "新浪微博",
-            "icons": [
-                "https://cdn.jsdelivr.net/gh/Orz-3/mini@master/Alpha/weibo.png",
-                "https://cdn.jsdelivr.net/gh/Orz-3/mini@master/Color/weibo.png"
-            ]
-        },
+			"author": "@sunert",
+			"keys": [
+				"youth_autoread",
+				"autotime_zq"
+			],
+			"settings": [
+				{
+					"id": "youth_cut",
+					"val": false,
+					"name": "缩减请求",
+					"type": "boolean",
+					"desc": "自动删除收益为0或者错误的阅读请求，使用完后请立即关闭，避免清空阅读请求"
+				}
+			],
+			"repo": "https://github.com/Sunert/Scripts/blob/master/Task/Youth_Read.js",
+			"id": "youthRead",
+			"script": "https://raw.githubusercontent.com/Sunert/Scripts/master/Task/Youth_Read.js",
+			"name": "中青自动阅读",
+			"icons": [
+				"https://cdn.jsdelivr.net/gh/Orz-3/mini@master/Alpha/youth.png",
+				"https://cdn.jsdelivr.net/gh/Orz-3/mini@master/Color/youth.png"
+			]
+		},
 		{
-            "author": "@sunert",
-            "keys": [
-                "cookie_ks"
-            ],
-            "settings": [
-                {
-                    "id": "cash_nebulaks",
-                    "val": "30",
-                    "name": "极速版提现",
-                    "type": "number",
-                    "desc": "极速版提现金额，默认30"
-                },
-                {
-                    "id": "cash_nebulaks",
-                    "val": "30",
-                    "name": "极速版提现",
-                    "type": "radios",
-                    "items": [
-                        {
-                            "key": "ALIPAY",
-                            "label": "支付宝"
-                        },
-                        {
-                            "key": "WECHAT",
-                            "label": "微信"
-                        }
-                    ],
-                    "desc": "极速版提现金额，默认30，前提是绑定支付方式"
-                }
-            ],
-            "repo": "https://github.com/Sunert/Scripts/blob/master/Task/kuaishou.js",
-            "id": "kuaishou",
-            "script": "https://raw.githubusercontent.com/Sunert/Scripts/master/Task/kuaishou.js",
-            "name": "快手极速版",
-            "icons": [
-                "https://cdn.jsdelivr.net/gh/Orz-3/mini@master/Alpha/kuaishou.png",
-                "https://cdn.jsdelivr.net/gh/Orz-3/mini@master/Color/kuaishou.png"
-            ]
-        },
+			"id": "tls",
+			"name": "特仑苏小程序",
+			"keys": [
+				"tlsurl",
+				"tlsheader",
+				"tlsurl2",
+				"tlsheader2",
+				"tlsurl3",
+				"tlsheader3",
+				"tlsurl4",
+				"tlsheader4",
+				"tlsurl5",
+				"tlsheader5",
+				"tlsurl6",
+				"tlsheader6",
+				"tlsurl7",
+				"tlsheader7",
+				"tlsurl8",
+				"tlsheader8",
+				"tlsurl9",
+				"tlsheader9",
+				"tlsurl10",
+				"tlsheader10",
+				"tlsurl11",
+				"tlsheader11",
+				"tlsurl12",
+				"tlsheader12",
+				"tlsurl13",
+				"tlsheader13",
+				"tlsurl14",
+				"tlsheader14",
+				"tlsurl15",
+				"tlsheader15",
+				"tlsurl16",
+				"tlsheader16",
+				"tlsurl17",
+				"tlsheader17",
+				"tlsurl18",
+				"tlsheader18",
+				"tlsurl19",
+				"tlsheader19",
+				"tlsurl20",
+				"tlsheader20"
+			],
+			"author": "@ziye",
+			"settings": [
+				{
+					"id": "tlsSuffix",
+					"name": "当前账号",
+					"val": "1",
+					"type": "number",
+					"desc": "当前抓取ck记录的账号序号，如：1、2、3、"
+				},
+				{
+					"id": "tlsCount",
+					"name": "账号个数",
+					"val": "1",
+					"type": "number",
+					"desc": "指定任务最多跑几个账号，根据抓取的账号数据个数来设值"
+				},
+				{
+					"id": "tlshyidA",
+					"name": "好友A",
+					"val": "0",
+					"type": "number",
+					"desc": "默认作者，自行修改"
+				},
+				{
+					"id": "tlshyidB",
+					"name": "好友B",
+					"val": "0",
+					"type": "number",
+					"desc": "默认作者，自行修改"
+				},
+				{
+					"id": "tlshyidC",
+					"name": "好友C",
+					"val": "0",
+					"type": "number",
+					"desc": "默认作者，自行修改"
+				},
+				{
+					"id": "tlshyidD",
+					"name": "好友D",
+					"val": "0",
+					"type": "number",
+					"desc": "默认作者，自行修改"
+				},
+				{
+					"id": "tlshyidE",
+					"name": "好友E",
+					"val": "0",
+					"type": "number",
+					"desc": "默认作者，自行修改"
+				},
+				{
+					"id": "tlshyidF",
+					"name": "好友F",
+					"val": "0",
+					"type": "number",
+					"desc": "默认作者，自行修改"
+				},
+				{
+					"id": "tlshyidG",
+					"name": "好友G",
+					"val": "0",
+					"type": "number",
+					"desc": "默认作者，自行修改"
+				},
+				{
+					"id": "tlshyidH",
+					"name": "好友H",
+					"val": "0",
+					"type": "number",
+					"desc": "默认作者，自行修改"
+				},
+				{
+					"id": "tlsXH",
+					"name": "循环获取CK",
+					"val": "0",
+					"type": "number",
+					"desc": "0关闭 1开启,默认关闭"
+				},
+				{
+					"id": "tlsXYZ",
+					"name": "执行概率",
+					"val": "100",
+					"type": "number",
+					"desc": "0不执行 可设置0-100,默认百分百"
+				},
+				{
+					"id": "tlsnotifyttt",
+					"name": "推送控制",
+					"val": "1",
+					"type": "number",
+					"desc": "0关闭，1推送,默认12点以及23点推送"
+				},
+				{
+					"id": "tlsnotifyInterval",
+					"name": "通知控制",
+					"val": "1",
+					"type": "number",
+					"desc": "0关闭，1为 所有通知，2为 12，23 点通知，3为 6，12，18，23 点通知 "
+				},
+				{
+					"id": "tlsMinutes",
+					"name": "推送-通知 分钟控制",
+					"val": "10",
+					"type": "number",
+					"desc": "推送以及通知控制在什么分钟段，可设置0-59,默认0到10"
+				}
+			],
+			"repo": "https://cdn.jsdelivr.net/gh/ziye888/JavaScript@main/Task/tls.js",
+			"icons": [
+				"https://cdn.jsdelivr.net/gh/ziye888/JavaScript@main/Task/tls.png",
+				"https://cdn.jsdelivr.net/gh/ziye888/JavaScript@main/Task/tls.png"
+			],
+			"script": "https://cdn.jsdelivr.net/gh/ziye888/JavaScript@main/Task/tls.js"
+		},
 		{
-            "id": "tls",
-            "name": "特仑苏小程序",
-            "keys": ["tlsurl", "tlsheader", "tlsurl2", "tlsheader2", "tlsurl3", "tlsheader3",  "tlsurl4", "tlsheader4",   "tlsurl5", "tlsheader5", "tlsurl6", "tlsheader6","tlsurl7", "tlsheader7", "tlsurl8", "tlsheader8", "tlsurl9", "tlsheader9", "tlsurl10", "tlsheader10", "tlsurl11", "tlsheader11", "tlsurl12", "tlsheader12",  "tlsurl13", "tlsheader13", "tlsurl14", "tlsheader14", "tlsurl15", "tlsheader15", "tlsurl16", "tlsheader16","tlsurl17", "tlsheader17", "tlsurl18", "tlsheader18",  "tlsurl19", "tlsheader19", "tlsurl20", "tlsheader20"],
-            "author": "@ziye",
-            "settings": [{
-				"id": "tlsSuffix",
-				"name": "当前账号",
-				"val": "1",
-				"type": "number",
-				"desc": "当前抓取ck记录的账号序号，如：1、2、3、"
-			}, {
-				"id": "tlsCount",
-				"name": "账号个数",
-				"val": "1",
-				"type": "number",
-				"desc": "指定任务最多跑几个账号，根据抓取的账号数据个数来设值"
-			}, {
-				"id": "tlshyidA",
-				"name": "好友A",
-				"val": "0",
-				"type": "number",
-				"desc": "默认作者，自行修改"
-			}, {
-				"id": "tlshyidB",
-				"name": "好友B",
-				"val": "0",
-				"type": "number",
-				"desc": "默认作者，自行修改"
-			}, {
-				"id": "tlshyidC",
-				"name": "好友C",
-				"val": "0",
-				"type": "number",
-				"desc": "默认作者，自行修改"
-			}, {
-				"id": "tlshyidD",
-				"name": "好友D",
-				"val": "0",
-				"type": "number",
-				"desc": "默认作者，自行修改"
-			}, {
-				"id": "tlshyidE",
-				"name": "好友E",
-				"val": "0",
-				"type": "number",
-				"desc": "默认作者，自行修改"
-			}, {
-				"id": "tlshyidF",
-				"name": "好友F",
-				"val": "0",
-				"type": "number",
-				"desc": "默认作者，自行修改"
-			}, {
-				"id": "tlshyidG",
-				"name": "好友G",
-				"val": "0",
-				"type": "number",
-				"desc": "默认作者，自行修改"
-			}, {
-				"id": "tlshyidH",
-				"name": "好友H",
-				"val": "0",
-				"type": "number",
-				"desc": "默认作者，自行修改"
-			}, {
-				"id": "tlsXH",
-				"name": "循环获取CK",
-				"val": "0",
-				"type": "number",
-				"desc": "0关闭 1开启,默认关闭"
-			}, {
-				"id": "tlsXYZ",
-				"name": "执行概率",
-				"val": "100",
-				"type": "number",
-				"desc": "0不执行 可设置0-100,默认百分百"
-			}, {
-				"id": "tlsnotifyttt",
-				"name": "推送控制",
-				"val": "1",
-				"type": "number",
-				"desc": "0关闭，1推送,默认12点以及23点推送"
-			}, {
-				"id": "tlsnotifyInterval",
-				"name": "通知控制",
-				"val": "1",
-				"type": "number",
-				"desc": "0关闭，1为 所有通知，2为 12，23 点通知，3为 6，12，18，23 点通知 "
-			}, {
-				"id": "tlsMinutes",
-				"name": "推送-通知 分钟控制",
-				"val": "10",
-				"type": "number",
-				"desc": "推送以及通知控制在什么分钟段，可设置0-59,默认0到10"
-			}
-            ],
-            "repo": "https://cdn.jsdelivr.net/gh/ziye888/JavaScript@main/Task/tls.js",
-            "icons": ["https://cdn.jsdelivr.net/gh/ziye888/JavaScript@main/Task/tls.png", "https://cdn.jsdelivr.net/gh/ziye888/JavaScript@main/Task/tls.png"],
-            "script": "https://cdn.jsdelivr.net/gh/ziye888/JavaScript@main/Task/tls.js"
-        },
+			"id": "didi",
+			"name": "滴滴出行",
+			"keys": [
+				"didi_token",
+				"didi_city_id",
+				"didi_lid"
+			],
+			"settings": [
+				{
+					"id": "didi_showLog",
+					"name": "日志开关",
+					"val": false,
+					"type": "boolean",
+					"desc": "是否打开接口返回详情日志打印，默认关闭"
+				},
+				{
+					"id": "didi_lottery",
+					"name": "抽奖开关",
+					"val": true,
+					"type": "boolean",
+					"desc": "是否打开福利金抽奖，默认关闭"
+				}
+			],
+			"author": "@whyour",
+			"repo": "https://github.com/whyour/hundun/blob/master/quanx/didi.js",
+			"script": "https://raw.githubusercontent.com/whyour/hundun/master/quanx/didi.js",
+			"icons": [
+				"https://raw.githubusercontent.com/Orz-3/mini/master/didi.png",
+				"https://raw.githubusercontent.com/Orz-3/task/master/didi.png"
+			]
+		},
 		{
-            "id": "didi",
-            "name": "滴滴出行",
-            "keys": [
-                "didi_token",
-                "didi_city_id",
-                "didi_lid"
-            ],
-            "settings": [
-                {
-                    "id": "didi_showLog",
-                    "name": "日志开关",
-                    "val": false,
-                    "type": "boolean",
-                    "desc": "是否打开接口返回详情日志打印，默认关闭"
-                },
-                {
-                    "id": "didi_lottery",
-                    "name": "抽奖开关",
-                    "val": true,
-                    "type": "boolean",
-                    "desc": "是否打开福利金抽奖，默认关闭"
-                }
-            ],
-            "author": "@whyour",
-            "repo": "https://github.com/whyour/hundun/blob/master/quanx/didi.js",
-            "script": "https://raw.githubusercontent.com/whyour/hundun/master/quanx/didi.js",
-            "icons": [
-                "https://raw.githubusercontent.com/Orz-3/mini/master/didi.png",
-                "https://raw.githubusercontent.com/Orz-3/task/master/didi.png"
-            ]
-        },
-		{
-            "id": "zZ.Haidilao",
-            "name": "海底捞",
-            "descs_html": [
-                "请先按<a href=\"https://raw.githubusercontent.com/zZPiglet/Task/master/Haidilao/Haidilao.js\">脚本注释</a>进行配置，然后进入\"海底捞\"app，手动签到一次或点击\"签到\"，若弹出\"首次写入海底捞等级 Token 成功\"及\"首次写入海底捞签到 Cookie 成功\"即可正常食用。",
-                "需要注意的是，有两条重写，一条为获取用户基本信息的，一条为签到的。两者独立互不影响，故即使没有获取到基础信息的，依旧可以签到，只是会有部分错误及 undefined。两次通知应该分别在进入\"我的\"及\"签到\"处通知。"
-            ],
-            "keys": [
-                "hilh",
-                "hilb",
-                "hich"
-            ],
-            "settings": [
-                {
-                    "id": "hilh",
-                    "name": "Token",
-                    "val": "",
-                    "type": "textarea",
-                    "autoGrow": true,
-                    "rows": 3,
-                    "desc": "用户等级接口登陆验证信息 _HAIDILAO_APP_TOKEN。"
-                },
-                {
-                    "id": "@hilb._HAIDILAO_APP_TOKEN",
-                    "name": "Body._HAIDILAO_APP_TOKEN",
-                    "val": "",
-                    "type": "textarea",
-                    "autoGrow": true,
-                    "rows": 2,
-                    "desc": "用户等级接口请求消息体，登陆验证信息，此部分应与 Token 中 _HAIDILAO_APP_TOKEN= 之后值一致。"
-                },
-                {
-                    "id": "@hilb.customerId",
-                    "name": "Body.customerId",
-                    "val": "",
-                    "type": "text",
-                    "desc": "用户等级接口请求消息体，用户编号。"
-                },
-                {
-                    "id": "@hilb.country",
-                    "name": "Body.country",
-                    "val": "",
-                    "type": "text",
-                    "desc": "用户等级接口请求消息体，国家。"
-                },
-                {
-                    "id": "hich",
-                    "name": "Cookie",
-                    "val": "",
-                    "type": "textarea",
-                    "autoGrow": true,
-                    "rows": 7,
-                    "desc": "签到接口登陆验证信息，包含更多信息，可自行修改调试。"
-                }
-            ],
-            "author": "@zZPiglet",
-            "repo": "https://github.com/zZPiglet/Task/blob/master/Haidilao/Haidilao.js",
-            "script": "https://raw.githubusercontent.com/zZPiglet/Task/master/Haidilao/Haidilao.js",
-            "icons": [
-                "https://raw.githubusercontent.com/Orz-3/mini/master/Alpha/haidilao.png",
-                "https://raw.githubusercontent.com/Orz-3/mini/master/Color/haidilao.png"
-            ]
-        }
+			"id": "10000",
+			"name": "10000",
+			"keys": [],
+			"settings": [
+				{
+					"id": "chavy_mobile_10000",
+					"name": "手机号码",
+					"val": "",
+					"type": "textarea",
+					"placeholder": "18918920000,\n18918920000",
+					"autoGrow": true,
+					"rows": 5,
+					"desc": "以英文逗号分隔多个号码, 可加回车"
+				}
+			],
+			"author": "@wangfei021325, @chavyleung",
+			"repo": "https://github.com/chavyleung/scripts/blob/master/10000/10000.js",
+			"script": "https://raw.githubusercontent.com/chavyleung/scripts/master/10000/10000.js",
+			"icons": [
+				"https://raw.githubusercontent.com/Orz-3/mini/master/Alpha/10000.png",
+				"https://raw.githubusercontent.com/Orz-3/mini/master/Color/10000.png"
+			]
+		}
 	]
 }
