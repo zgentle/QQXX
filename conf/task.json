@@ -2,7 +2,7 @@
     "name": "ZGentle_task",
     "description": "ZGentle_task",
     "task": [
-		"10,20,30 0-23 * * * https://raw.githubusercontent.com/age174/-/main/xfyjc.js, tag=幸福养鸡场, img-url=https://ae01.alicdn.com/kf/Ue110888eddad48a8a78d99284e599b134.jpg, enabled=true",
+		"5,24,46 0-23 * * * https://raw.githubusercontent.com/age174/-/main/xfyjc.js, tag=幸福养鸡场, img-url=https://ae01.alicdn.com/kf/Ue110888eddad48a8a78d99284e599b134.jpg, enabled=true",
 		"10 0 * * * https://jdsharedresourcescdn.azureedge.net/jdresource/jd_jin_tie.js, tag=京东领金贴, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Color/jd.png, enabled=true",
 	    "10 0 * * * https://raw.githubusercontent.com/age174/-/main/bsly.js, tag=百事乐元, img-url=https://ae01.alicdn.com/kf/U2fec2be787b74fb3928d83773822eef56.jpg, enabled=true",
 			
@@ -48,7 +48,6 @@
 		"29 35 8 * * * https://raw.githubusercontent.com/chavyleung/scripts/master/sfexpress/sfexpress.js, tag=顺丰速运, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Color/sfexpress.png, enabled=true",
 		"9 35 8 * * * https://raw.githubusercontent.com/chavyleung/scripts/master/flyertea/flyertea.js, tag=飞客茶馆, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Color/flyertea.png, enabled=true",
 		"59 34 8 * * * https://raw.githubusercontent.com/chavyleung/scripts/master/dongqiudi/dongqiudi.js, tag=懂球帝, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Color/dongqiudi.png, enabled=true",
-		"49 34 8 * * * https://raw.githubusercontent.com/chavyleung/scripts/master/10000/10000.js, tag=中国电信, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Color/10000.png, enabled=true",
         "39 34 8 * * * https://raw.githubusercontent.com/chavyleung/scripts/master/10010/10010.js, tag=中国联通, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Color/10010.png, enabled=true",
         "29 34 8 * * * https://raw.githubusercontent.com/chavyleung/scripts/master/10086/10086.js, tag=中国移动, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Color/10086.png, enabled=true",
 		"19 34 8 * * * https://raw.githubusercontent.com/barrym-chen/Script/master/tongc/tongc_sign.js, tag=同程小程序签到, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Color/tongc.png, enabled=true",
