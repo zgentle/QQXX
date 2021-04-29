@@ -23,60 +23,6 @@
 			}
 		},
 		{
-			"name": "京东领金贴",
-			"type": "cron",
-			"time": "10 0 * * *",
-			"job": {
-				"type": "runjs",
-				"target": "https://jdsharedresourcescdn.azureedge.net/jdresource/jd_jin_tie.js"
-			}
-		},
-		{
-			"name": "百事乐元",
-			"type": "cron",
-			"time": "10 0 * * *",
-			"job": {
-				"type": "runjs",
-				"target": "https://raw.githubusercontent.com/age174/-/main/bsly.js"
-			}
-		},
-		{
-			"name": "京东价格提醒",
-			"type": "cron",
-			"time": "5 0 * * *",
-			"job": {
-				"type": "runjs",
-				"target": "https://raw.githubusercontent.com/toulanboy/scripts/master/jd_price_detect/jd_price_detect.js"
-			}
-		},
-		{
-			"name": "切换会话,img-url=https://raw.githubusercontent.com/Orz-3/task/master/box.png",
-			"type": "cron",
-			"time": "0 12 * * *",
-			"job": {
-				"type": "runjs",
-				"target": "https://raw.githubusercontent.com/chavyleung/scripts/master/box/switcher/box.switcher.js"
-			}
-		},
-		{
-			"name": "萌喵大作战无限刷",
-			"type": "cron",
-			"time": "0 0 1 1 *",
-			"job": {
-				"type": "runjs",
-				"target": "https://raw.githubusercontent.com/age174/-/main/mmdzz.js"
-			}
-		},
-		{
-			"name": "陌嗨短视频",
-			"type": "cron",
-			"time": "15 10 * * *",
-			"job": {
-				"type": "runjs",
-				"target": "https://raw.githubusercontent.com/age174/-/main/mhdsp.js"
-			}
-		},
-		{
 			"name": "快看点",
 			"type": "cron",
 			"time": "*/20 * * * *",
@@ -110,6 +56,51 @@
 			"job": {
 				"type": "runjs",
 				"target": "https://raw.githubusercontent.com/GoodHolidays/Scripts/master/Task/Youth_Read.js"
+			}
+		},
+		{
+			"name": "京东价格提醒",
+			"type": "cron",
+			"time": "5 0 * * *",
+			"job": {
+				"type": "runjs",
+				"target": "https://raw.githubusercontent.com/toulanboy/scripts/master/jd_price_detect/jd_price_detect.js"
+			}
+		},
+		{
+			"name": "切换会话,img-url=https://raw.githubusercontent.com/Orz-3/task/master/box.png",
+			"type": "cron",
+			"time": "0 12 * * *",
+			"job": {
+				"type": "runjs",
+				"target": "https://raw.githubusercontent.com/chavyleung/scripts/master/box/switcher/box.switcher.js"
+			}
+		},
+		{
+			"name": "陌嗨短视频",
+			"type": "cron",
+			"time": "15 10 * * *",
+			"job": {
+				"type": "runjs",
+				"target": "https://raw.githubusercontent.com/age174/-/main/mhdsp.js"
+			}
+		},
+		{
+			"name": "京东领金贴",
+			"type": "cron",
+			"time": "10 0 * * *",
+			"job": {
+				"type": "runjs",
+				"target": "https://jdsharedresourcescdn.azureedge.net/jdresource/jd_jin_tie.js"
+			}
+		},
+		{
+			"name": "百事乐元",
+			"type": "cron",
+			"time": "10 0 * * *",
+			"job": {
+				"type": "runjs",
+				"target": "https://raw.githubusercontent.com/age174/-/main/bsly.js"
 			}
 		},
 		{
