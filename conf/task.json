@@ -13,7 +13,6 @@
 		"0 0 1 1 * https://raw.githubusercontent.com/age174/-/main/mmdzz.js, tag=萌喵大作战无限刷, img-url=https://ae01.alicdn.com/kf/U13a7be18e87942118e4402e22652fd70H.jpg, enabled=true",
 		"15 10 * * * https://raw.githubusercontent.com/age174/-/main/mhdsp.js, tag=陌嗨短视频, img-url=https://raw.githubusercontent.com/usrnb/options/main/QuantumultX/icons/task/mhdsp.png, enabled=true",
         "*/20 * * * * https://raw.githubusercontent.com/ZhiYi-N/Private-Script/master/Scripts/kkd.js, tag=快看点, img-url=https://raw.githubusercontent.com/ZhiYi-N/Private-Script/master/img/kkd.png, enabled=true",
-		"1 0 * * * https://raw.githubusercontent.com/chavyleung/scripts/master/qimao/qmnovel.js, tag=七猫小说, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Color/qimao.png, enabled=true",
 		"7 0-23 * * * https://cdn.jsdelivr.net/gh/ziye888/JavaScript@main/Task/shuqi.js, tag=书旗小说ziye版, img-url=https://raw.githubusercontent.com/CenBoMin/GithubSync/main/SHUQI/shuqi.png, enabled=true",
 		"10 */1 * * * https://raw.githubusercontent.com/GoodHolidays/Scripts/master/Task/youth.js, tag=sunert中青签到&转盘宝箱&时长, img-url=https://raw.githubusercontent.com/erdongchanyo/icon/main/taskicon/Youth.png, enabled=true",
 		"10 */2 * * * https://raw.githubusercontent.com/GoodHolidays/Scripts/master/Task/Youth_Read.js, tag=sunert中青自动阅读, img-url=https://raw.githubusercontent.com/erdongchanyo/icon/main/taskicon/Youth.png, enabled=true",
@@ -21,6 +20,7 @@
 		"11 0 9 * * * https://raw.githubusercontent.com/NobyDa/Script/master/JD-DailyBonus/JD_DailyBonus.js, tag=京东, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Color/jd.png, enabled=true",
 		"11 2 9 * * * https://qxzy.top/rules/QuantumultX/js/jd_bean_change.js, tag=京豆变动通知, img-url=https://qxzy.top/rules/QuantumultX/img/jd.png, enabled=true",
 		"0 * * * * https://raw.githubusercontent.com/nianyuguai/longzhuzhu/main/qx/jd_super_redrain.js, tag=整点京豆雨, enabled=true",
+		"2 0-23/4 * * * https://jdsharedresourcescdn.azureedge.net/jdresource/jd_cash.js, tag=签到领现金, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Color/jd.png, enabled=true",
         "30 18 * * * https://raw.githubusercontent.com/whyour/hundun/master/quanx/jd_zjd.js, tag=京东半自动领京豆, img-url=https://raw.githubusercontent.com/58xinian/icon/master/jd_syj.png, enabled=true",
 		"19 37 8 * * * https://qxzy.top/rules/QuantumultX/js/jx_sign.js, tag=京东京喜签到, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Color/jd.png, enabled=true",
 		"10 16 * * * https://jdsharedresourcescdn.azureedge.net/jdresource/jd_tcl.js, tag=京东球队赢好礼（不加购）, img-url=https://raw.githubusercontent.com/58xinian/icon/master/jdyjd.png, enabled=true",
@@ -37,7 +37,6 @@
 		"9 36 8 * * * https://qxzy.top/rules/QuantumultX/js/lxk0301/jd_jxd.js, tag=京小兑XCX, img-url=https://qxzy.top/rules/QuantumultX/img/jd_jxd.png, enabled=true",
 		
 		"59 35 8 * * * https://raw.githubusercontent.com/zZPiglet/Task/master/Blibee/Blibee.js, tag=便利蜂, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Color/Blibee.png, enabled=true",
-		"5,35 8-23 * * * https://raw.githubusercontent.com/ZhiYi-N/Private-Script/master/Scripts/dyjsb.js, tag=抖音极速版, img-url=https://raw.githubusercontent.com/ZhiYi-N/Private-Script/master/img/dyjsb.png, enabled=true",
 		"49 35 8 * * * https://raw.githubusercontent.com/chavyleung/scripts/master/mcdd/mcdd.js, tag=叮咚买菜, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Color/mcdd.png, enabled=true",
 		"1 8,12,17 * * * https://raw.githubusercontent.com/iepngs/Script/master/dingdong/index.js, tag=叮咚农场, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Color/mcdd.png, enabled=true",
 		"9 1 9 * * * https://raw.githubusercontent.com/dompling/Script/master/xiaomiyp/xiaomiyp.js, tag=小米有品, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Color/xiaomiyp.png, enabled=true",
