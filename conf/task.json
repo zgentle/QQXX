@@ -2,6 +2,7 @@
     "name": "ZGentle_task",
     "description": "ZGentle_task",
     "task": [
+		"11 8 * * * https://raw.githubusercontent.com/xl2101200/-/main/xffd.js, tag=幸福饭店, enabled=true",
 		"17 0-23 * * * https://raw.githubusercontent.com/age174/-/main/qlp.js, tag=考状元娶老婆, img-url=https://ae01.alicdn.com/kf/Uc2775b8f4abf41788ba89df0317e58050.jpg, enabled=true",
 		"*/15 * * * * https://raw.githubusercontent.com/Ariszy/Private-Script/master/Scripts/ryhy.js, tag=如意花园",
 		"37 9 * * * https://raw.githubusercontent.com/age174/-/main/dgh.js, tag=大公会, img-url=https://ae01.alicdn.com/kf/U48ac7674ccc7422dac2bb266d8c9a17b2.jpg, enabled=true",
