@@ -2,7 +2,7 @@
     "name": "ZGentle_task",
     "description": "ZGentle_task",
     "task": [
-		"10 0 * * * https://raw.githubusercontent.com/age174/-/main/scdcg.js, tag=食材大冲关, img-url= https://ae01.alicdn.com/kf/U9f2a16b203ed40318d22f9fd5fdce9a9S.jpg, enabled=true",
+		"10 9 * * * https://raw.githubusercontent.com/age174/-/main/csxdr.js, tag=超市小达人, img-url=https://ae01.alicdn.com/kf/Udd9cb36174cf41a7a69e28a643a360a9a.jpg, enabled=true",
 		"11 8 * * * https://raw.githubusercontent.com/xl2101200/-/main/xffd.js, tag=幸福饭店, enabled=true",
 		"17 0-23 * * * https://raw.githubusercontent.com/age174/-/main/qlp.js, tag=考状元娶老婆, img-url=https://ae01.alicdn.com/kf/Uc2775b8f4abf41788ba89df0317e58050.jpg, enabled=true",
 		"*/15 * * * * https://raw.githubusercontent.com/Ariszy/Private-Script/master/Scripts/ryhy.js, tag=如意花园",
