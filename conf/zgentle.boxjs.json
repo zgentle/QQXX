@@ -6,6 +6,20 @@
 	"repo": "https://github.com/zgentle/QQXX",
 	"apps": [
 		{
+			"id": "my_jd_cookie",
+			"name": "京东cookie",
+			"keys": [
+				"CookieJD",
+				"CookieJD2",
+				"CookiesJD"
+			],
+			"author": "@ZGentle",
+			"icons": [
+				"https://raw.githubusercontent.com/Orz-3/mini/master/jd.png",
+				"https://raw.githubusercontent.com/Orz-3/task/master/jd.png"
+			]
+		},
+		{
 			"id": "jd_price_detect",
 			"name": "京东价格提醒",
 			"keys": [
