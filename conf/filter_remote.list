@@ -46,3 +46,5 @@ DOMAIN,analytics.strava.com,DIRECT
 # > Umeng
 DOMAIN,msg.umeng.com,DIRECT
 DOMAIN,msg.umengcloud.com,DIRECT
+# > huobi
+DOMAIN-SUFFIX,huobi.com,PROXY
