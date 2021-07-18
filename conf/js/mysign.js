@@ -22,14 +22,14 @@ if ($.isNode()) {
 let todaytimems = Math.round(Date.now())
 
 ////////////////////////////【变量】//////////////////////////////////
-$.setdata({},`ttcjbody`)
-$.setdata({"Accept":"*/*","Accept-Encoding":"gzip, deflate, br","Connection":"keep-alive","Content-Type":"application/json","Host":"ttcj.dashengtec.com","Authorization":"Bearer 66720|i8tJqB4Aov0zXHjOsaZsAzAqWlYHzITTzYh69NC5","User-Agent":"Mozilla/5.0 (iPhone; CPU iPhone OS 14_5_1 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148 MicroMessenger/8.0.7(0x18000731) NetType/WIFI Language/zh_CN","source":"minigame","channel":"","Referer":"https://servicewechat.com/wxfdec7316ebac7c08/23/page-frame.html"},`ttcjhd`)
-$.setdata([{"roleId":"41105292","server":"1418"}],`mhxybodyArr`)
-$.setdata({"Host": "god-welfare.gameyw.netease.com","GL-Uid": "2eec2c07f7d945d2a1e0099f30d1e140","Accept": "*/*","GL-Version": "3.6.0","GL-Source": "URS","Accept-Language": "zh-cn","Content-Type": "application/json;charset=utf-8","Origin": "https://ds.163.com","User-Agent": "Mozilla/5.0 (iPhone; CPU iPhone OS 14_5_1 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148 Godlike/3.6.0 UEPay/com.netease.godlike/iOS_7.6.5","GL-ClientType": 51,"GL-CurTime": 1626404089727,"GL-Channel": "","Referer": "https://ds.163.com/","GL-DeviceId": "5E431547-38EF-44B8-9D7B-04CCD48AD04D","GL-Token": "e4e0f086c82c4111bfef7bc8a25ca8a"},`mhxyhd`)
+$.setdata('{}',`ttcjbody`)
+$.setdata('{"Accept":"*/*","Accept-Encoding":"gzip, deflate, br","Connection":"keep-alive","Content-Type":"application/json","Host":"ttcj.dashengtec.com","Authorization":"Bearer 66720|i8tJqB4Aov0zXHjOsaZsAzAqWlYHzITTzYh69NC5","User-Agent":"Mozilla/5.0 (iPhone; CPU iPhone OS 14_5_1 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148 MicroMessenger/8.0.7(0x18000731) NetType/WIFI Language/zh_CN","source":"minigame","channel":"","Referer":"https://servicewechat.com/wxfdec7316ebac7c08/23/page-frame.html"}',`ttcjhd`)
+$.setdata('[{"roleId":"41105292","server":"1418"}]',`mhxybodyArr`)
+$.setdata('{"Host": "god-welfare.gameyw.netease.com","GL-Uid": "2eec2c07f7d945d2a1e0099f30d1e140","Accept": "*/*","GL-Version": "3.6.0","GL-Source": "URS","Accept-Language": "zh-cn","Content-Type": "application/json;charset=utf-8","Origin": "https://ds.163.com","User-Agent": "Mozilla/5.0 (iPhone; CPU iPhone OS 14_5_1 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148 Godlike/3.6.0 UEPay/com.netease.godlike/iOS_7.6.5","GL-ClientType": 51,"GL-CurTime": 1626404089727,"GL-Channel": "","Referer": "https://ds.163.com/","GL-DeviceId": "5E431547-38EF-44B8-9D7B-04CCD48AD04D","GL-Token": "e4e0f086c82c4111bfef7bc8a25ca8a"}',`mhxyhd`)
 
 let ttcjbody = $.getdata('ttcjbody')
 let ttcjhd = $.getdata('ttcjhd')
-let mhxybodyArr = $.getdata('mhxybodyArr')
+let mhxybodyArr = JSON.parse($.getdata('mhxybodyArr')) || []
 let mhxyhd = $.getdata('mhxyhd')
 let DD = RT(4000, 8000)
 
@@ -74,7 +74,7 @@ function ttcjqd(timeout = 0) {
   return new Promise((resolve) => {
     let url = {
       url : `https://ttcj.dashengtec.com/api/v2/sign`,
-      headers : ttcjhd,
+      headers : JSON.parse(ttcjhd),
       body : `${ttcjbody}`
     }
     $.post(url, async (err, resp, data) => {
@@ -93,7 +93,7 @@ function ttcjfb(timeout = 0) {
   return new Promise((resolve) => {
     let url = {
       url : `https://ttcj.dashengtec.com/api/v2/sign/video`,
-      headers : ttcjhd,
+      headers : JSON.parse(ttcjhd),
       body : `${ttcjbody}`
     }
     $.post(url, async (err, resp, data) => {
@@ -112,7 +112,7 @@ function ttcjmh(timeout = 0) {
   return new Promise((resolve) => {
     let url = {
       url : `https://ttcj.dashengtec.com/api/v2/lucky-wheel`,
-      headers : ttcjhd,
+      headers : JSON.parse(ttcjhd),
       body : `${ttcjbody}`
     }
     $.post(url, async (err, resp, data) => {
@@ -131,7 +131,7 @@ function ttcjxx(timeout = 0) {
   return new Promise((resolve) => {
     let url = {
       url : `https://ttcj.dashengtec.com/api/v2/index/finance`,
-      headers : ttcjhd
+      headers : JSON.parse(ttcjhd)
     }
     $.get(url, async (err, resp, data) => {
       try {
@@ -151,8 +151,8 @@ function mhxySign(timeout = 0) {
     mhxyhd['GL-CurTime'] = todaytimems
     let url = {
       url : `https://god-welfare.gameyw.netease.com/v1/welfare/xyq/checkIn`,
-      headers : mhxyhd,
-      body : JSON.stringify(mhxybody)
+      headers : JSON.parse(mhxyhd),
+      body : `${mhxybody}`
     }
     $.post(url, async (err, resp, data) => {
       try {
@@ -171,8 +171,8 @@ function mhxyCJ(timeout = 0) {
     mhxyhd['GL-CurTime'] = todaytimems + ''
     let url = {
       url : `https://god-welfare.gameyw.netease.com/v1/welfare/xyq/luckDraw/luckDraw`,
-      headers : mhxyhd,
-      body : JSON.stringify(mhxybody)
+      headers : JSON.parse(mhxyhd),
+      body : `${mhxybody}`
     }
     $.post(url, async (err, resp, data) => {
       try {
@@ -193,6 +193,7 @@ function ceshi(timeout = 0) {
     "fileName":"附件名称6111",
     "fileUrl":"附件保存位置6"
   }
+  obj = JSON.stringify(obj)
   return new Promise((resolve) => {
     let url = {
       url : `http://localhost:80/dev-api/smb/facilityInfo/add/file`,
@@ -200,7 +201,7 @@ function ceshi(timeout = 0) {
         'Content-Type': 'application/json',
         'Authorization': 'Bearer eyJhbGciOiJIUzUxMiJ9.eyJsb2dpbl91c2VyX2tleSI6IjZkMmQ0NThmLWY1ZjItNDYwMi1hMDg0LTc5NTI0M2Q4NGZmMSJ9.wDRb3c6SudV7wJcaXWN2UyeL8azaDouONYLQXgNqIHHfKFykb1rZgGV1N9G8KmWKS6UdF2EHgBexgy27IjnauQ'
       },
-      body: JSON.stringify(obj)
+      body: `${obj}`
     }
     $.post(url, async (err, resp, data) => {
       const result = JSON.parse(data)
