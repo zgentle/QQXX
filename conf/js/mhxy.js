@@ -1,10 +1,10 @@
 /*
 [task_local]
-#天天抽奖365
+#梦幻西游
 0 8 * * * https://raw.githubusercontent.com/zgentle/QQXX/master/conf/js/mhxy.js, tag=梦幻西游, enabled=true
 
 [rewrite_local]
-#天天抽奖365
+#梦幻西游
 https://god.gameyw.netease.com/v1/app/base/user/init url script-request-body https://raw.githubusercontent.com/zgentle/QQXX/master/conf/js/mhxy.js
 
 [MITM]
