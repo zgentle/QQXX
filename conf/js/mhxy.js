@@ -114,9 +114,7 @@ function mhxyck() {
     let oldhd = JSON.parse(mhxyhd)
     const newhd = $request.headers
     oldhd['GL-Token'] = newhd['GL-Token']
-    if(newhd)  $.setdata(oldhd,`mhxyhd`)
-    $.log(JSON.stringify(oldhd))
-    $.log(oldhd['GL-Token'])
+    if(newhd)  $.setdata(JSON.stringify(oldhd),`mhxyhd`)
     $.log(newhd['GL-Token'])
     $.msg($.name,"",'梦幻西游'+'headrs获取成功！')
   }
