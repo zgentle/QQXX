@@ -1,4 +1,17 @@
-const jsname = '综合签到'
+/*
+[task_local]
+#天天抽奖365
+0 8 * * * https://raw.githubusercontent.com/zgentle/QQXX/master/conf/js/mhxy.js, tag=梦幻西游, enabled=true
+
+[rewrite_local]
+#天天抽奖365
+https://god.gameyw.netease.com/v1/app/base/user/init url script-request-body https://raw.githubusercontent.com/zgentle/QQXX/master/conf/js/mhxy.js
+
+[MITM]
+hostname = god.gameyw.netease.com
+*/
+
+const jsname = '梦幻西游'
 const $ = Env(jsname)
 //0为关闭日志，1为开启,默认为0
 const logs = 0;
@@ -22,29 +35,32 @@ if ($.isNode()) {
 let todaytimems = Math.round(Date.now())
 
 ////////////////////////////【变量】//////////////////////////////////
-// $.setdata('{}',`ttcjbody`)
-// $.setdata('{"Accept":"*/*","Accept-Encoding":"gzip, deflate, br","Connection":"keep-alive","Content-Type":"application/json","Host":"ttcj.dashengtec.com","Authorization":"Bearer 66720|i8tJqB4Aov0zXHjOsaZsAzAqWlYHzITTzYh69NC5","User-Agent":"Mozilla/5.0 (iPhone; CPU iPhone OS 14_5_1 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148 MicroMessenger/8.0.7(0x18000731) NetType/WIFI Language/zh_CN","source":"minigame","channel":"","Referer":"https://servicewechat.com/wxfdec7316ebac7c08/23/page-frame.html"}',`ttcjhd`)
+// $.setdata('[{"roleId":"40977931","server":"1418"}]',`mhxybodyArr`)
+// $.setdata('{"Host": "god-welfare.gameyw.netease.com","GL-Uid": "2eec2c07f7d945d2a1e0099f30d1e140","Accept": "*/*","GL-Version": "3.6.0","GL-Source": "URS","Accept-Language": "zh-cn","Content-Type": "application/json;charset=utf-8","Origin": "https://ds.163.com","User-Agent": "Mozilla/5.0 (iPhone; CPU iPhone OS 14_5_1 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148 Godlike/3.6.0 UEPay/com.netease.godlike/iOS_7.6.5","GL-ClientType": 51,"GL-CurTime": 1626404089727,"GL-Channel": "","Referer": "https://ds.163.com/","GL-DeviceId": "5E431547-38EF-44B8-9D7B-04CCD48AD04D","GL-Token": "3dbd0424cd1842958f96f3bf21fd2a94"}',`mhxyhd`)
 
-let ttcjbody = $.getdata('ttcjbody')
-let ttcjhd = $.getdata('ttcjhd')
+let mhxybodyArr = JSON.parse($.getdata('mhxybodyArr')) || []
+let mhxyhd = $.getdata('mhxyhd')
 let DD = RT(4000, 8000)
 
 ////////////////////////////【执行】//////////////////////////////////
 !(async () => {
   cc = (`${jsname}任务执行通知🔔`);
-  if (ttcjbody && ttcjhd) {
-	  console.log(`\n开始【天天抽奖365】`)
-    tz += `\n开始【天天抽奖365】`
-	  await ttcjqd();
-	  await $.wait(DD)
-	  await ttcjfb();
-	  await $.wait(DD)
-	  await ttcjmh();
-	  await $.wait(DD)
-	  await ttcjxx();
-    await $.wait(DD)
+  if (typeof $request !== "undefined") {
+    await mhxyck()
+  }else if (mhxybodyArr && mhxyhd) {
+    for (let i = 0; i < mhxybodyArr.length; i++) {
+      if (mhxybodyArr[i]) {
+        mhxybody = mhxybodyArr[i];
+        $.index = i + 1;
+        console.log(`\n开始【梦幻签到${$.index}】`)
+        tz += `\n开始【梦幻签到${$.index}】`
+        await mhxySign();
+        await $.wait(DD)
+        await mhxyCJ()
+        await $.wait(DD)
+      }
+    }
   }
-  
   // await ceshi()
   await showmsg2();
 })()
@@ -52,83 +68,57 @@ let DD = RT(4000, 8000)
   .finally(() => $.done())
 
 ////////////////////////////【方法】//////////////////////////////////
-// 天天抽奖
-function ttcjqd(timeout = 0) {
+// 梦幻西游
+function mhxySign(timeout = 0) {
   return new Promise((resolve) => {
+    mhxyhd['GL-CurTime'] = todaytimems
     let url = {
-      url : `https://ttcj.dashengtec.com/api/v2/sign`,
-      headers : JSON.parse(ttcjhd),
-      body : `${ttcjbody}`
+      url : `https://god-welfare.gameyw.netease.com/v1/welfare/xyq/checkIn`,
+      headers : JSON.parse(mhxyhd),
+      body : JSON.stringify(mhxybody)
     }
     $.post(url, async (err, resp, data) => {
       try {
       const result = JSON.parse(data)
       if(result.code == 200){
-        console.log('\n天天抽奖签到： '+result.message)
-        tz += '\n天天抽奖签到： '+result.message
+        console.log(`\n梦幻西游签到${$.index}： `+ result.errmsg)
+        tz += `\n梦幻西游签到${$.index}： `+ result.errmsg
       }else{
-        console.log('\n天天抽奖签到： '+result.message)
+        console.log(`\n梦幻西游签到${$.index}： `+ result.errmsg)
       }} catch (e){} finally {resolve()}
     },timeout)
   })
 }
-function ttcjfb(timeout = 0) {
+function mhxyCJ(timeout = 0) {
   return new Promise((resolve) => {
+    mhxyhd['GL-CurTime'] = todaytimems + ''
     let url = {
-      url : `https://ttcj.dashengtec.com/api/v2/sign/video`,
-      headers : JSON.parse(ttcjhd),
-      body : `${ttcjbody}`
+      url : `https://god-welfare.gameyw.netease.com/v1/welfare/xyq/luckDraw/luckDraw`,
+      headers : JSON.parse(mhxyhd),
+      body : JSON.stringify(mhxybody)
     }
     $.post(url, async (err, resp, data) => {
       try {
       const result = JSON.parse(data)
       if(result.code == 200){
-        console.log('\n签到翻倍： '+ result.message)
-        tz += '\n签到翻倍： '+result.message
+        console.log(`\n梦幻西游抽奖${$.index}： `+ result.errmsg)
+        tz += `\n梦幻西游抽奖${$.index}： `+ result.errmsg
       }else{
-        console.log('\n签到翻倍： '+result.message)
+        console.log(`\n梦幻西游抽奖${$.index}： `+ result.errmsg)
       }} catch (e){} finally {resolve()}
     },timeout)
   })
 }
-function ttcjmh(timeout = 0) {
-  return new Promise((resolve) => {
-    let url = {
-      url : `https://ttcj.dashengtec.com/api/v2/lucky-wheel`,
-      headers : JSON.parse(ttcjhd),
-      body : `${ttcjbody}`
-    }
-    $.post(url, async (err, resp, data) => {
-      try {
-      const result = JSON.parse(data)
-      if(result.code == 200){
-        console.log('\n开盲盒： '+ result.message+'\n获得：'+ resule.data.prize.name +'碎片')
-        tz += '\n开盲盒： '+ result.message+'\n获得：'+ resule.data.prize.name +'碎片'
-      }else{
-        console.log('\n开盲盒： '+ result.message)
-      }} catch (e){} finally {resolve()}
-    },timeout)
-  })
+function mhxyck() {
+  if ($request.url.indexOf("/v1/app/base/user/init") > -1) {
+    let oldhd = JSON.parse(mhxyhd)
+    const newhd = $request.headers
+    oldhd['GL-Token'] = newhd['GL-Token']
+    if(newhd)  $.setdata(oldhd,`mhxyhd`)
+    $.log(newhd)
+    $.msg($.name,"",'梦幻西游'+'headrs获取成功！')
+  }
 }
-function ttcjxx(timeout = 0) {
-  return new Promise((resolve) => {
-    let url = {
-      url : `https://ttcj.dashengtec.com/api/v2/index/finance`,
-      headers : JSON.parse(ttcjhd)
-    }
-    $.get(url, async (err, resp, data) => {
-      try {
-      const result = JSON.parse(data)
-      if(result.code == 200){
-        console.log('\n金币数量： '+result.data.coin+'个'+'\n现金：'+result.data.balance+'元')
-        tz += '\n金币数量： '+result.data.coin+'个'+'\n现金：'+result.data.balance+'元'
-      }else{
-        console.log('\n查询金币余额： '+result.message)
-      }} catch (e){} finally {resolve()}
-    },timeout)
-  })
-}
-
 // 测试
 function ceshi(timeout = 0) {
   let obj = {
