@@ -25,6 +25,7 @@ let todaytimems = Math.round(Date.now())
 // $.setdata('{}',`ttcjbody`)
 // $.setdata('{"Accept":"*/*","Accept-Encoding":"gzip, deflate, br","Connection":"keep-alive","Content-Type":"application/json","Host":"ttcj.dashengtec.com","Authorization":"Bearer 66720|i8tJqB4Aov0zXHjOsaZsAzAqWlYHzITTzYh69NC5","User-Agent":"Mozilla/5.0 (iPhone; CPU iPhone OS 14_5_1 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148 MicroMessenger/8.0.7(0x18000731) NetType/WIFI Language/zh_CN","source":"minigame","channel":"","Referer":"https://servicewechat.com/wxfdec7316ebac7c08/23/page-frame.html"}',`ttcjhd`)
 
+const ttcjbodyArr = [], ttcjhdArr = []
 let ttcjbody = $.getdata('ttcjbody')
 let ttcjhd = $.getdata('ttcjhd')
 let DD = RT(4000, 8000)
@@ -32,17 +33,31 @@ let DD = RT(4000, 8000)
 ////////////////////////////【执行】//////////////////////////////////
 !(async () => {
   cc = (`${jsname}任务执行通知🔔`);
-  if (ttcjbody && ttcjhd) {
-	  console.log(`\n开始【天天抽奖365】`)
-    tz += `\n开始【天天抽奖365】`
-	  await ttcjqd();
-	  await $.wait(DD)
-	  await ttcjfb();
-	  await $.wait(DD)
-	  await ttcjmh();
-	  await $.wait(DD)
-	  await ttcjxx();
-    await $.wait(DD)
+  
+  ttcjbodyArr.push($.getdata('ttcjbody'))
+  ttcjhdArr.push($.getdata('ttcjhd'))
+  let ttcjcount = ($.getval('ttcjcount') || '1');
+  for (let i = 2; i <= ttcjcount; i++) {
+    ttcjbodyArr.push($.getdata(`ttcjbody${i}`))
+    ttcjhdArr.push($.getdata(`ttcjhd${i}`))
+  }
+  console.log(`------------- 共${ttcjhdArr.length}个账号-------------\n`)
+  for (let i = 0; i < ttcjhdArr.length; i++) {
+    if (ttcjhdArr[i]) {
+      ttcjbody = ttcjbodyArr[i];
+      ttcjhd = ttcjhdArr[i];
+      $.index = i + 1;
+      console.log(`\n开始【天天抽奖${$.index}】`)
+      tz += `\n开始【天天抽奖365${$.index}】`
+      await ttcjqd();
+      await $.wait(DD)
+      await ttcjfb();
+      await $.wait(DD)
+      await ttcjmh();
+      await $.wait(DD)
+      await ttcjxx();
+      await $.wait(DD)
+    }
   }
   
   // await ceshi()
