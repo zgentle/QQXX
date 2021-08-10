@@ -172,11 +172,11 @@ function ceshi(timeout = 0) {
 async function showmsg2() {
   if (notifyInterval == 1) {
     if ($.isNode()) {
-      if ((hour == 8 && minute <= 30) || (hour == 12 && minute <= 30) || (hour == 23 && minute <= 30)) {
+      if (hour > 8) {
         await notify.sendNotify($.name, tz)
       }
     } else {
-      if ((hour == 8 && minute <= 30) || (hour == 12 && minute <= 30) || (hour == 23 && minute <= 30)) {
+      if (hour > 8) {
         $.msg(cc, '', tz);
       }
     }
