@@ -113,8 +113,10 @@ function mhxyck() {
   if ($request.url.indexOf("/v1/app/base/user/init") > -1) {
     let oldhd = JSON.parse(mhxyhd)
     const newhd = $request.headers
-    // oldhd['GL-Token'] = newhd['GL-Token']
-    if(newhd)  $.setdata(JSON.stringify(newhd),`mhxyhd`)
+    oldhd['GL-Token'] = newhd['GL-Token']
+	oldhd['GL-Uid'] = newhd['GL-Uid']
+	oldhd['GL-Version'] = newhd['GL-Version']
+    if(newhd)  $.setdata(JSON.stringify(oldhd),`mhxyhd`)
     $.log(newhd['GL-Token'])
     $.msg($.name,"",'梦幻西游'+'headrs获取成功！')
   }
